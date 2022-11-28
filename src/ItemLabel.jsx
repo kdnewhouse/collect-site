@@ -1,6 +1,7 @@
 import React from 'react';
 
 export const ItemLabel = (props) => {
+    //Format date into the string format "Month YYYY"
     var date = props.itemdata.itemrelease.substring(0, props.itemdata.itemrelease.indexOf('T'));
     date = date.split("-")
     var month = ""

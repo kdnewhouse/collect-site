@@ -1,11 +1,10 @@
-import React, {useState, useEffect}  from 'react';
 import { ItemLabel } from './ItemLabel';
 
-
+//Import image files from relative path
 const images = importAll(require.context('./images/figureImages', false, /\.(png|jpe?g|jpg)$/));
 
 function Item(props) {
-
+    //If filter is set to upcoming, do not return any Items already released
     if(props.filter == "upcoming") {
         const date = new Date();
 
@@ -21,6 +20,7 @@ function Item(props) {
         }
     }
     
+    //If search bar contains text, search for items containing text in the name
     if(props.search != "") {
         const itemName = props.itemdata.itemname.toLowerCase()
         if(!itemName.includes(props.search.toLowerCase())) {
@@ -44,6 +44,7 @@ function Item(props) {
 
 export default Item;
 
+//Function to import all images
 function importAll(r) {
     let images = {};
     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });

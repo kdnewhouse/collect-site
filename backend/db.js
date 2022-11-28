@@ -1,4 +1,5 @@
 const Pool = require('pg').Pool
+
 const pool = new Pool({
   user: 'postgres',
   host: 'localhost',
@@ -7,6 +8,7 @@ const pool = new Pool({
   port: 5432,
 });
 
+//Database query functions
 const getItems = () => {
     return new Promise(function(resolve, reject) {
         pool.query('select * from item', (error, results) => {
@@ -62,15 +64,4 @@ const getItemsSortSeries = () => {
     }) 
 }
 
-const getItemLabel = () => {
-    return new Promise(function(resolve, reject) {
-        pool.query('select itemJPG, itemMedia, itemSeriesNumber from item', (error, results) => {
-        if (error) {
-            reject(error)
-        }
-        resolve(results.rows);
-        })
-    }) 
-}
-
-module.exports = { getItems, getItemsSortMedia, getItemsSortRetailer, getItemsSortRelease, getItemsSortSeries, getItemLabel };
+module.exports = { getItems, getItemsSortMedia, getItemsSortRetailer, getItemsSortRelease, getItemsSortSeries };

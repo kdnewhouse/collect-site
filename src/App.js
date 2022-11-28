@@ -1,4 +1,7 @@
-//cd C:\Users\kaeli\Documents\Dev\React\collect-site
+/* Action figure Database
+ * Author: Kaelin Newhouse
+ * Last Modified: 11/28/2022
+*/
 
 import React, {useState, useEffect} from 'react';
 import Item from './Item'
@@ -11,7 +14,7 @@ function Page() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        console.log(searchString)
+        //Change the order of the query based on the sort selection
         switch(query) {
             case "sortMedia":
                 sortMedia().then(res => {
@@ -36,6 +39,7 @@ function Page() {
         }
     }, [query, filter, searchString]);
 
+    //Map though database results to create array of Item elements
     var itemArr = data.map(item => (
         <Item itemdata = {item} imageSrc = {"src"} filter={filter} search={searchString}/>
     )) 
@@ -95,13 +99,7 @@ async function sortSeries() {
     return x
 }
 
-//Functions
-function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-}
-
+//Database query functions
 const getItemsSortMedia = async () => {
     try {
       const response = await fetch('http://localhost:3001/itemsSortMedia', {mode:'cors'})
