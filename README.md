@@ -1,11 +1,8 @@
 # Collect-site
 
-Main Collect site
+Site demo: https://youtu.be/_OdPOl7zf5g
 
-Node.js, React, PostgreSQL Site
-
-
-Action Figure Database site 
+PERN Stack Website
 
 Features include:
 
