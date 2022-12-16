@@ -8,14 +8,14 @@ import Item from './Item'
 import './index.css'
 
 function Page() {
-    const [query, setQuery] = useState('sortMedia')
+    const [sort, setSort] = useState('sortMedia')
     const [filter, setFilter] = useState('select') 
     const [searchString, setSearchString]= useState('')
     const [data, setData] = useState([])
 
     useEffect(() => {
         //Change the order of the query based on the sort selection
-        switch(query) {
+        switch(sort) {
             case "sortMedia":
                 sortMedia().then(res => {
                     setData(res)
@@ -37,7 +37,7 @@ function Page() {
                 });
                 break;
         }
-    }, [query, filter, searchString]);
+    }, [sort, filter, searchString]);
 
     //Map though database results to create array of Item elements
     var itemArr = data.map(item => (
@@ -50,7 +50,7 @@ function Page() {
             <h1 class="title">Black Series Master List</h1>
             <div class="headerElement" id="sort">
                 <p id="sortLabel">Sort</p>
-                <select id="sortOptions" onChange={ () =>{setQuery(document.getElementById("sortOptions").value)} }>
+                <select id="sortOptions" onChange={ () =>{setSort(document.getElementById("sortOptions").value)} }>
                     <option value="sortMedia">Media</option>
                     <option value="sortRelease">Release Date</option>
                     <option value="sortSeries">Series</option>
