@@ -143,5 +143,10 @@ insert into item (itemName, itemRelease, itemWave, itemSeries, itemSeriesSubseri
 ('Luthen Rael','2099-01-01','{10}','Galaxy','','All Retailers','Star Wars: Andor','6','luthen-rael.jpg'),
 ('Senator Mon Mothma','2099-01-01','{10}','Galaxy','','All Retailers','Star Wars: Andor','7','senator-mon-mothma.jpg'),
 ('Cassian Andor','2099-01-01','{10}','Galaxy','','All Retailers','Star Wars: Andor','8','cassian-andor-08.jpg'),
-('Vel Sartha','2099-01-01','{11}','Galaxy','','All Retailers','Star Wars: Andor','9','vel-sartha.jpg');
-
+('Vel Sartha','2099-01-01','{11}','Galaxy','','All Retailers','Star Wars: Andor','9','vel-sartha.jpg'),
+('Clone Commander Jesse','2099-01-01','{}','Galaxy','','Walmart','Star Wars: The Clone Wars','12','clone-commander-jesse.jpg'),
+('Ned-B & Purge Trooper','2099-01-01','{}','Galaxy','Carbonized','Amazon','Star Wars: Obi-Wan Kenobi','','ned-b-&-purge-trooper.jpg'),
+('Luke Skywalker & Grogu','2099-01-01','{}','Galaxy','','All Retailers','Star Wars: The Book of Boba Fett','3','luke-skywalker-&-grogu.jpg'),
+('Scorch','2023-03-01','{}','Galaxy','Gaming Greats','GameStop','Star Wars: Republic Commando','18','scorch.jpg'),
+('Krrsantan','2099-01-01','{}','Galaxy','','All Retailers','Star Wars: The Book of Boba Fett','4','krrsantan.jpg'),
+('Cobb Vanth & Cad Bane','2099-01-01','{}','Galaxy','','Target','Star Wars: The Book of Boba Fett','','cobb-vanth-&-cad-bane.jpg'),
